@@ -1,5 +1,5 @@
 //
-//  LoginView-ViewModel.swift
+//  LoginViewModel.swift
 //  EdilControliOS
 //
 //  Created by Goodcode M2 on 21.12.23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension ContentView {
+extension AuthView {
     
     @MainActor class ViewModel: ObservableObject {
         
