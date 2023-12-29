@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject private var viewModel = ViewModel()
     @State private var email: String = ""
     
     var body: some View {
@@ -20,7 +21,11 @@ struct ContentView: View {
                 TextField("Email address", text: $email)
                     .textFieldStyle(.roundedBorder)
                 Button {
-                    
+                    Task {
+                        do {
+                            await viewModel.requestOTP(username: email, password: "", authSession: viewModel.authSession ?? AuthSession(session: ""), otp: "", applicationId: "")
+                        }
+                    }
                 } label: {
                     Text("Send OTP")
                         .fontWeight(Font.Weight.semibold)
@@ -32,6 +37,12 @@ struct ContentView: View {
             .frame(maxWidth: .infinity)
         }
         .frame(maxWidth: 450)
+        .onAppear(
+            perform: {
+                Task {
+                    await viewModel.getAuthSession()
+                }
+            })
     }
 }
 

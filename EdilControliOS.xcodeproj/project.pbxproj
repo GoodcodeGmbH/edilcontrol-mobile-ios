@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DA803222B347B180084317A /* OTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803212B347B180084317A /* OTPRequest.swift */; };
+		2DA803242B347BC90084317A /* OTPRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803232B347BC90084317A /* OTPRequestResponse.swift */; };
+		2DA8D7F12B342BCF005FFBB7 /* LoginView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8D7F02B342BCF005FFBB7 /* LoginView-ViewModel.swift */; };
+		2DA8D7F62B343F29005FFBB7 /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8D7F52B343F29005FFBB7 /* AuthSession.swift */; };
 		2DAF383D2B303AAD00C0C760 /* EdilControliOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF383C2B303AAD00C0C760 /* EdilControliOSApp.swift */; };
 		2DAF383F2B303AAD00C0C760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF383E2B303AAD00C0C760 /* ContentView.swift */; };
 		2DAF38412B303AAE00C0C760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF38402B303AAE00C0C760 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DA803212B347B180084317A /* OTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequest.swift; sourceTree = "<group>"; };
+		2DA803232B347BC90084317A /* OTPRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequestResponse.swift; sourceTree = "<group>"; };
+		2DA8D7F02B342BCF005FFBB7 /* LoginView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView-ViewModel.swift"; sourceTree = "<group>"; };
+		2DA8D7F52B343F29005FFBB7 /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
 		2DAF38392B303AAD00C0C760 /* EdilControliOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdilControliOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAF383C2B303AAD00C0C760 /* EdilControliOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdilControliOSApp.swift; sourceTree = "<group>"; };
 		2DAF383E2B303AAD00C0C760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +80,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DA8D7EF2B342B9B005FFBB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2DA8D7F02B342BCF005FFBB7 /* LoginView-ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DA8D7F22B343839005FFBB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DA8D7F32B343ECF005FFBB7 /* API */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DA8D7F32B343ECF005FFBB7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2DA8D7F42B343EDB005FFBB7 /* Auth */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2DA8D7F42B343EDB005FFBB7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2DA8D7F52B343F29005FFBB7 /* AuthSession.swift */,
+				2DA803212B347B180084317A /* OTPRequest.swift */,
+				2DA803232B347BC90084317A /* OTPRequestResponse.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		2DAF38302B303AAD00C0C760 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +137,8 @@
 		2DAF383B2B303AAD00C0C760 /* EdilControliOS */ = {
 			isa = PBXGroup;
 			children = (
+				2DA8D7F22B343839005FFBB7 /* Model */,
+				2DA8D7EF2B342B9B005FFBB7 /* ViewModel */,
 				2DAF383C2B303AAD00C0C760 /* EdilControliOSApp.swift */,
 				2DAF383E2B303AAD00C0C760 /* ContentView.swift */,
 				2DAF38402B303AAE00C0C760 /* Assets.xcassets */,
@@ -260,6 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DAF383F2B303AAD00C0C760 /* ContentView.swift in Sources */,
+				2DA8D7F12B342BCF005FFBB7 /* LoginView-ViewModel.swift in Sources */,
+				2DA803242B347BC90084317A /* OTPRequestResponse.swift in Sources */,
+				2DA8D7F62B343F29005FFBB7 /* AuthSession.swift in Sources */,
+				2DA803222B347B180084317A /* OTPRequest.swift in Sources */,
 				2DAF383D2B303AAD00C0C760 /* EdilControliOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

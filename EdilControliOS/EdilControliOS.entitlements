@@ -7,4 +7,9 @@
     <key>com.apple.security.files.user-selected.read-only</key>
     <true/>
 </dict>
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <true/>
+</dict>
 </plist>

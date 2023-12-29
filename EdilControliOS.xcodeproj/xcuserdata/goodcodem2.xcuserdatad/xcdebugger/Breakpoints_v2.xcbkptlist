@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E1F6FECB-F443-480A-8E6D-E083AD6C04CF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A2C46D3-AD58-45B0-8AE5-866CBC382B62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EdilControliOS/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9A2C46D3-AD58-45B0-8AE5-866CBC382B62 - 1aca5c108a64263d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in EdilControliOS.ContentView.body.getter : some"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/APKs/EdilControl/EdilControliOS/EdilControliOS/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "9A2C46D3-AD58-45B0-8AE5-866CBC382B62 - f5f2b15ca70ba494"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in EdilControliOS.ContentView.body.getter : some"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/APKs/EdilControl/EdilControliOS/EdilControliOS/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "9A2C46D3-AD58-45B0-8AE5-866CBC382B62 - 10768ef7c093e233"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in EdilControliOS.ContentView.body.getter : some"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/APKs/EdilControl/EdilControliOS/EdilControliOS/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "9A2C46D3-AD58-45B0-8AE5-866CBC382B62 - 1aca5c108a6426b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in EdilControliOS.ContentView.body.getter : some"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/APKs/EdilControl/EdilControliOS/EdilControliOS/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "9A2C46D3-AD58-45B0-8AE5-866CBC382B62 - f5f2b15ca70ba410"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in EdilControliOS.ContentView.body.getter : some"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/APKs/EdilControl/EdilControliOS/EdilControliOS/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "9A2C46D3-AD58-45B0-8AE5-866CBC382B62 - 10768ef7c093e2b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in EdilControliOS.ContentView.body.getter : some"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/APKs/EdilControl/EdilControliOS/EdilControliOS/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
