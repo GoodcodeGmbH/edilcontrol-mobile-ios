@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct EdilControliOSApp: App {
     
-    @StateObject var viewModel = AuthView.ViewModel()
+    @StateObject var viewModel = LoginViewModel()
     
     var body: some Scene {
         WindowGroup {

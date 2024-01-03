@@ -9,14 +9,14 @@ import SwiftUI
 
 struct AuthView: View {
     
-    @EnvironmentObject private var viewModel: AuthView.ViewModel
+    @EnvironmentObject private var loginViewModel: LoginViewModel
     @State private var email: String = ""
     @State private var navigateToOTPView = false
     
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: OTPView(), isActive: $navigateToOTPView) {
+                NavigationLink(destination: OTPView().environmentObject(loginViewModel), isActive: $navigateToOTPView) {
                            EmptyView()
                 }
                 Image(systemName: "globe")
@@ -28,8 +28,13 @@ struct AuthView: View {
                     Button {
                         Task {
                             do {
-                                await viewModel.requestOTP(username: email, password: "", authSession: viewModel.authSession ?? AuthSession(session: ""), otp: "", applicationId: "")
+                                // save username in view model from user input text field
+                                loginViewModel.username = email
                                 
+                                // perform otp request
+                                await loginViewModel.requestOTP(username: email, password: "", authSession: loginViewModel.authSession ?? AuthSession(session: ""), otp: "", applicationId: "")
+                                
+                                // change bool value to navigate to fragment otp
                                 navigateToOTPView = true
                             }
                         }
@@ -46,7 +51,7 @@ struct AuthView: View {
             .frame(maxWidth: 450)
             .onAppear {
                 Task {
-                    await viewModel.getAuthSession()
+                    await loginViewModel.getAuthSession()
                 }
             }
         }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D1159362B3ED14A008A83AA /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1159352B3ED14A008A83AA /* OTPView.swift */; };
+		2D2DFDCD2B45547600A1C712 /* OTPValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDCC2B45547600A1C712 /* OTPValidate.swift */; };
+		2D2DFDCF2B4554BD00A1C712 /* OTPValidateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDCE2B4554BD00A1C712 /* OTPValidateResponse.swift */; };
 		2DA803222B347B180084317A /* OTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803212B347B180084317A /* OTPRequest.swift */; };
 		2DA803242B347BC90084317A /* OTPRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803232B347BC90084317A /* OTPRequestResponse.swift */; };
 		2DA8D7F12B342BCF005FFBB7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8D7F02B342BCF005FFBB7 /* LoginViewModel.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		2D1159352B3ED14A008A83AA /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		2D2DFDCC2B45547600A1C712 /* OTPValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPValidate.swift; sourceTree = "<group>"; };
+		2D2DFDCE2B4554BD00A1C712 /* OTPValidateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPValidateResponse.swift; sourceTree = "<group>"; };
 		2DA803212B347B180084317A /* OTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequest.swift; sourceTree = "<group>"; };
 		2DA803232B347BC90084317A /* OTPRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequestResponse.swift; sourceTree = "<group>"; };
 		2DA8D7F02B342BCF005FFBB7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				2DA8D7F52B343F29005FFBB7 /* AuthSession.swift */,
 				2DA803212B347B180084317A /* OTPRequest.swift */,
 				2DA803232B347BC90084317A /* OTPRequestResponse.swift */,
+				2D2DFDCC2B45547600A1C712 /* OTPValidate.swift */,
+				2D2DFDCE2B4554BD00A1C712 /* OTPValidateResponse.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -323,10 +329,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1159362B3ED14A008A83AA /* OTPView.swift in Sources */,
+				2D2DFDCD2B45547600A1C712 /* OTPValidate.swift in Sources */,
 				2DAF383F2B303AAD00C0C760 /* AuthView.swift in Sources */,
 				2DA8D7F12B342BCF005FFBB7 /* LoginViewModel.swift in Sources */,
 				2DA803242B347BC90084317A /* OTPRequestResponse.swift in Sources */,
 				2DA8D7F62B343F29005FFBB7 /* AuthSession.swift in Sources */,
+				2D2DFDCF2B4554BD00A1C712 /* OTPValidateResponse.swift in Sources */,
 				2DA803222B347B180084317A /* OTPRequest.swift in Sources */,
 				2DAF383D2B303AAD00C0C760 /* EdilControliOSApp.swift in Sources */,
 			);

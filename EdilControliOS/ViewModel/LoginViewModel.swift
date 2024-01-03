@@ -7,85 +7,140 @@
 
 import Foundation
 
-extension AuthView {
-    
-    @MainActor class ViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
         
-        @Published var authSession: AuthSession?
-        @Published var otpRequestResponse: OTPRequestResponse?
+    @Published var username: String?
+    @Published var authSession: AuthSession?
+    @Published var otpRequestResponse: OTPRequestResponse?
+    @Published var otpValidateResponse: OTPValidateResponse?
         
-        func getAuthSession() async {
+    func getAuthSession() async {
             
-            guard let url = URL(string: "http://127.0.0.1:5001/api/v1/auth/session") else {
-                print("Invalid URL")
+        guard let url = URL(string: "http://127.0.0.1:5001/api/v1/auth/session") else {
+            print("Invalid URL")
+            return
+        }
+            
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                
+            if let error = error {
+                print("Error: \(error)")
+                    
                 return
             }
-            
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 
-                if let error = error {
-                    print("Error: \(error)")
+            guard let httpResponse = response as? HTTPURLResponse,
+                    (200...299).contains(httpResponse.statusCode) else {
+                print("Unsuccessful response")
                     
-                    return
-                }
+                return
+            }
                 
-                guard let httpResponse = response as? HTTPURLResponse,
-                      (200...299).contains(httpResponse.statusCode) else {
-                    print("Unsuccessful response")
-                    
-                    return
-                }
-                
-                if let data = data {
-                    do {
-                        let decodedData = try JSONDecoder().decode(AuthSession.self, from: data)
+            if let data = data {
+                do {
+                    let decodedData = try JSONDecoder().decode(AuthSession.self, from: data)
                         
-                        DispatchQueue.main.async {
-                            self.authSession = decodedData
-                        }
-                    } catch {
-                        print("Error decoding JSON: \(error)")
+                    DispatchQueue.main.async {
+                        self.authSession = decodedData
                     }
+                } catch {
+                    print("Error decoding JSON: \(error)")
                 }
             }
-            
-            task.resume()
         }
+            
+        task.resume()
+    }
         
-        func requestOTP(username: String, password: String, authSession: AuthSession, otp: String, applicationId: String) async {
+    func requestOTP(username: String, password: String, authSession: AuthSession, otp: String, applicationId: String) async {
             
-            guard let url = URL(string: "http://127.0.0.1:5001/api/v1/auth/otp/request") else {
-                print("Invalid URL")
-                return
-            }
+        guard let url = URL(string: "http://127.0.0.1:5001/api/v1/auth/otp/request") else {
+            print("Invalid URL")
             
-            let otpRequest = OTPRequest(username: username, password: password, session: authSession.session, otp: otp, applicationId: applicationId)
-            
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            
-            do {
-                let jsonData = try JSONEncoder().encode(otpRequest)
-                request.httpBody = jsonData
-            } catch let error {
-                print("JSON encoding error: \(error.localizedDescription)")
-                
-                return
-            }
-            
-            do {
-                let (data, _) = try await URLSession.shared.data(for: request)
-                
-                if let responseString = String(data: data, encoding: .utf8) {
-                    otpRequestResponse = OTPRequestResponse(response: responseString)
-                } else {
-                    print("Could not convert data to string")
-                }
-            } catch {
-                print("Network request error: \(error.localizedDescription)")
-            }
-
+            return
         }
+            
+        let otpRequest = OTPRequest(username: username, password: password, session: authSession.session, otp: otp, applicationId: applicationId)
+            
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+        do {
+            let jsonData = try JSONEncoder().encode(otpRequest)
+            request.httpBody = jsonData
+        } catch let error {
+            print("JSON encoding error: \(error.localizedDescription)")
+                
+            return
+        }
+            
+        do {
+            let (data, _) = try await URLSession.shared.data(for: request)
+                
+            if let responseString = String(data: data, encoding: .utf8) {
+                otpRequestResponse = OTPRequestResponse(response: responseString)
+            } else {
+                print("Could not convert data to string")
+            }
+        } catch {
+            print("Network request error: \(error.localizedDescription)")
+        }
+    }
+    
+    func validateOTP(username: String, password: String, authSession: AuthSession, otp: String, applicationId: String) async {
+        
+        let otpValidate = OTPValidate(
+            username: username,
+            password: password,
+            session: authSession.session,
+            otp: otp,
+            applicationId: applicationId
+        )
+            
+        guard let url = URL(string: "http://127.0.0.1:5001/api/v1/auth/otp/validate") else {
+            print("Invalid URL")
+            
+            return
+        }
+            
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+        do {
+            let jsonData = try JSONEncoder().encode(otpValidate)
+            request.httpBody = jsonData
+        } catch {
+            print("Error encoding OTPValidate object: \(error.localizedDescription)")
+            
+            return
+        }
+            
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                    print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                    
+                return
+            }
+                
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                do {
+                    let otpResponse = try JSONDecoder().decode(OTPValidateResponse.self, from: data)
+                        
+                    self.otpValidateResponse = otpResponse
+
+                    // onComplete()
+                } catch {
+                    print("Error decoding OTPValidateResponse: \(error.localizedDescription)")
+                }
+            } else {
+                if let responseData = String(data: data, encoding: .utf8) {
+                        print("POST (otp/validate): \(responseData)")
+                } else {
+                        print("POST (otp/validate): Body is null")
+                }
+            }
+        }.resume()
     }
 }

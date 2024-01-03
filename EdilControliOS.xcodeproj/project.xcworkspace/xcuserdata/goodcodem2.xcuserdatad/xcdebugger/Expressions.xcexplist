@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "LoginViewModel.validateOTP(username:password:authSession:otp:applicationId:):LoginViewModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in LoginViewModel.validateOTP(username:password:authSession:otp:applicationId:):LoginViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "OTPValidateResponse">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ContentView.ViewModel.requestOTP(username:password:authSession:otp:applicationId:):LoginView-ViewModel.swift">
       </ContextState>
    </ContextStates>

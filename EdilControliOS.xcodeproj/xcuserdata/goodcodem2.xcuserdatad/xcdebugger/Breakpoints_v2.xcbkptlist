@@ -115,77 +115,155 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1AB3A3FD-8567-4FEB-870F-B8809FCEC28D"
+            uuid = "92D2B0D9-93EF-4C9B-B4FC-B0D7CF79CC4E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EdilControliOS/View/Auth/AuthView.swift"
+            filePath = "EdilControliOS/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "validateOTP(username:password:authSession:otp:applicationId:)"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1AB3A3FD-8567-4FEB-870F-B8809FCEC28D - b7a655dfe88d2c43"
+                  uuid = "92D2B0D9-93EF-4C9B-B4FC-B0D7CF79CC4E - bd6fa347fdc7161"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.textFieldStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.TextFieldStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in EdilControliOS.AuthView.body.getter : some"
+                  symbolName = "(1) suspend resume partial function for EdilControliOS.LoginViewModel.validateOTP(username: Swift.String, password: Swift.String, authSession: EdilControliOS.AuthSession, otp: Swift.String, applicationId: Swift.String) async -&gt; ()"
                   moduleName = "EdilControliOS"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/View/Auth/AuthView.swift"
+                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/ViewModel/LoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "180">
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "412">
                </Location>
                <Location
-                  uuid = "1AB3A3FD-8567-4FEB-870F-B8809FCEC28D - b7a655dfe88d2c43"
+                  uuid = "92D2B0D9-93EF-4C9B-B4FC-B0D7CF79CC4E - bd6fa347fdc7161"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.textFieldStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.TextFieldStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in EdilControliOS.AuthView.body.getter : some"
+                  symbolName = "(1) suspend resume partial function for EdilControliOS.LoginViewModel.validateOTP(username: Swift.String, password: Swift.String, authSession: EdilControliOS.AuthSession, otp: Swift.String, applicationId: Swift.String) async -&gt; ()"
                   moduleName = "EdilControliOS"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/View/Auth/AuthView.swift"
+                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/ViewModel/LoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "180">
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "556">
                </Location>
                <Location
-                  uuid = "1AB3A3FD-8567-4FEB-870F-B8809FCEC28D - bb1c88e2527040f7"
+                  uuid = "92D2B0D9-93EF-4C9B-B4FC-B0D7CF79CC4E - bd6fa347fdc713e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.textFieldStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.TextFieldStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in EdilControliOS.AuthView.body.getter : some"
+                  symbolName = "(1) suspend resume partial function for EdilControliOS.LoginViewModel.validateOTP(username: Swift.String, password: Swift.String, authSession: EdilControliOS.AuthSession, otp: Swift.String, applicationId: Swift.String) async -&gt; ()"
                   moduleName = "EdilControliOS"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/View/Auth/AuthView.swift"
+                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/ViewModel/LoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "180">
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "412">
                </Location>
                <Location
-                  uuid = "1AB3A3FD-8567-4FEB-870F-B8809FCEC28D - d79db4924f475d44"
+                  uuid = "92D2B0D9-93EF-4C9B-B4FC-B0D7CF79CC4E - bd6fa347fdc713e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.textFieldStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.TextFieldStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.NavigationLink&lt;SwiftUI.EmptyView, EdilControliOS.OTPView&gt;, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in EdilControliOS.AuthView.body.getter : some"
+                  symbolName = "(1) suspend resume partial function for EdilControliOS.LoginViewModel.validateOTP(username: Swift.String, password: Swift.String, authSession: EdilControliOS.AuthSession, otp: Swift.String, applicationId: Swift.String) async -&gt; ()"
                   moduleName = "EdilControliOS"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/View/Auth/AuthView.swift"
+                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/ViewModel/LoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "180">
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "556">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4FDFC33-0DE0-42DC-BFD6-6DBC936E3C7A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EdilControliOS/ViewModel/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "validateOTP(username:password:authSession:otp:applicationId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4FDFC33-0DE0-42DC-BFD6-6DBC936E3C7A - b71dc0fd0eb61938"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EdilControliOS.LoginViewModel.validateOTP(username: Swift.String, password: Swift.String, authSession: EdilControliOS.AuthSession, otp: Swift.String, applicationId: Swift.String) async -&gt; ()"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/ViewModel/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "F4FDFC33-0DE0-42DC-BFD6-6DBC936E3C7A - b71dc0fd0eb61938"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EdilControliOS.LoginViewModel.validateOTP(username: Swift.String, password: Swift.String, authSession: EdilControliOS.AuthSession, otp: Swift.String, applicationId: Swift.String) async -&gt; ()"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/ViewModel/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "F4FDFC33-0DE0-42DC-BFD6-6DBC936E3C7A - b71dc0fd0eb6195f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EdilControliOS.LoginViewModel.validateOTP(username: Swift.String, password: Swift.String, authSession: EdilControliOS.AuthSession, otp: Swift.String, applicationId: Swift.String) async -&gt; ()"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/ViewModel/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "F4FDFC33-0DE0-42DC-BFD6-6DBC936E3C7A - b71dc0fd0eb6195f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EdilControliOS.LoginViewModel.validateOTP(username: Swift.String, password: Swift.String, authSession: EdilControliOS.AuthSession, otp: Swift.String, applicationId: Swift.String) async -&gt; ()"
+                  moduleName = "EdilControliOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/goodcodem2/Desktop/EdilControl/edilcontrol-mobile-ios/EdilControliOS/ViewModel/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "320">
                </Location>
             </Locations>
          </BreakpointContent>

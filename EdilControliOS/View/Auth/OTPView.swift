@@ -10,7 +10,7 @@ import SwiftUI
 
 struct OTPView: View {
     
-    @EnvironmentObject private var viewModel: AuthView.ViewModel
+    @EnvironmentObject private var loginViewModel: LoginViewModel
     @State private var otp: String = ""
     
     var body: some View {
@@ -33,7 +33,8 @@ struct OTPView: View {
                 Button {
                     Task {
                         do {
-                            /*await viewModel.requestOTP(username: email, password: "", authSession: viewModel.authSession ?? AuthSession(session: ""), otp: "", applicationId: "") */
+                            // perform validate otp
+                            await loginViewModel.validateOTP(username: loginViewModel.username!, password: "", authSession: loginViewModel.authSession ?? AuthSession(session: ""), otp: otp, applicationId: "")
                         }
                     }
                 } label: {
