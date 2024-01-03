@@ -20,6 +20,8 @@
 		2D2DFDE02B45649200A1C712 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDDF2B45649200A1C712 /* Company.swift */; };
 		2D2DFDE22B4564B600A1C712 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDE12B4564B600A1C712 /* Address.swift */; };
 		2D2DFDE42B4564F500A1C712 /* URLSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDE32B4564F500A1C712 /* URLSettings.swift */; };
+		2D2DFDE72B456BC900A1C712 /* TenantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDE62B456BC900A1C712 /* TenantListView.swift */; };
+		2D2DFDE92B456C5700A1C712 /* ItemTenantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDE82B456C5700A1C712 /* ItemTenantList.swift */; };
 		2DA803222B347B180084317A /* OTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803212B347B180084317A /* OTPRequest.swift */; };
 		2DA803242B347BC90084317A /* OTPRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803232B347BC90084317A /* OTPRequestResponse.swift */; };
 		2DA8D7F12B342BCF005FFBB7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8D7F02B342BCF005FFBB7 /* LoginViewModel.swift */; };
@@ -64,6 +66,8 @@
 		2D2DFDDF2B45649200A1C712 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		2D2DFDE12B4564B600A1C712 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		2D2DFDE32B4564F500A1C712 /* URLSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSettings.swift; sourceTree = "<group>"; };
+		2D2DFDE62B456BC900A1C712 /* TenantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantListView.swift; sourceTree = "<group>"; };
+		2D2DFDE82B456C5700A1C712 /* ItemTenantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTenantList.swift; sourceTree = "<group>"; };
 		2DA803212B347B180084317A /* OTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequest.swift; sourceTree = "<group>"; };
 		2DA803232B347BC90084317A /* OTPRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequestResponse.swift; sourceTree = "<group>"; };
 		2DA8D7F02B342BCF005FFBB7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		2D1159332B3ECF56008A83AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D2DFDE52B456BB100A1C712 /* Tenant */,
 				2D1159342B3ECF5F008A83AA /* Auth */,
 			);
 			path = View;
@@ -136,6 +141,15 @@
 				2D2DFDDF2B45649200A1C712 /* Company.swift */,
 				2D2DFDE12B4564B600A1C712 /* Address.swift */,
 				2D2DFDE32B4564F500A1C712 /* URLSettings.swift */,
+			);
+			path = Tenant;
+			sourceTree = "<group>";
+		};
+		2D2DFDE52B456BB100A1C712 /* Tenant */ = {
+			isa = PBXGroup;
+			children = (
+				2D2DFDE62B456BC900A1C712 /* TenantListView.swift */,
+				2D2DFDE82B456C5700A1C712 /* ItemTenantList.swift */,
 			);
 			path = Tenant;
 			sourceTree = "<group>";
@@ -367,9 +381,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2DFDE22B4564B600A1C712 /* Address.swift in Sources */,
+				2D2DFDE92B456C5700A1C712 /* ItemTenantList.swift in Sources */,
 				2D1159362B3ED14A008A83AA /* OTPView.swift in Sources */,
 				2D2DFDCD2B45547600A1C712 /* OTPValidate.swift in Sources */,
 				2D2DFDDA2B4563FA00A1C712 /* Plan.swift in Sources */,
+				2D2DFDE72B456BC900A1C712 /* TenantListView.swift in Sources */,
 				2DAF383F2B303AAD00C0C760 /* AuthView.swift in Sources */,
 				2D2DFDDE2B45645100A1C712 /* Feature.swift in Sources */,
 				2D2DFDD22B45624000A1C712 /* Tenant.swift in Sources */,

@@ -179,10 +179,6 @@ class LoginViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         self.tenantList = decodedData
                         
-                        print(self.tenantList.count)
-                        
-                        print(self.tenantList[0])
-                        
                         completion()
                     }
                 } catch {

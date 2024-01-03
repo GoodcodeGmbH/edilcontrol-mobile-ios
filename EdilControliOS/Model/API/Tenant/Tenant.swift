@@ -5,7 +5,7 @@
 //  Created by Goodcode M2 on 03.01.24.
 //
 
-struct Tenant: Decodable {
+struct Tenant: Decodable, Identifiable {
     let id: String?
     let user: User?
     let application: Application?

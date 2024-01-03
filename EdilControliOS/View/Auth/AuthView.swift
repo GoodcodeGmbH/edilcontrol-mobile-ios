@@ -16,7 +16,7 @@ struct AuthView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: OTPView().environmentObject(loginViewModel), isActive: $navigateToOTPView) {
+                NavigationLink(destination: OTPView().environmentObject(loginViewModel).navigationBarBackButtonHidden(true), isActive: $navigateToOTPView) {
                            EmptyView()
                 }
                 Image(systemName: "globe")
@@ -55,9 +55,6 @@ struct AuthView: View {
                 }
             }
         }
-        .navigationDestination(isPresented: $navigateToOTPView, destination: {
-            OTPView()
-        })
     }
 }
 
