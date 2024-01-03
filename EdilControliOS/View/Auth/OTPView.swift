@@ -34,7 +34,13 @@ struct OTPView: View {
                     Task {
                         do {
                             // perform validate otp
-                            await loginViewModel.validateOTP(username: loginViewModel.username!, password: "", authSession: loginViewModel.authSession ?? AuthSession(session: ""), otp: otp, applicationId: "")
+                            await loginViewModel.validateOTP(username: loginViewModel.username!, password: "", authSession: loginViewModel.authSession ?? AuthSession(session: ""), otp: otp, applicationId: "") {
+                                
+                                // retrieve tenant list only if successful validate otp api call
+                                await loginViewModel.getTenantList {
+                                    
+                                }
+                            }
                         }
                     }
                 } label: {

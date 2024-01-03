@@ -13,6 +13,7 @@ class LoginViewModel: ObservableObject {
     @Published var authSession: AuthSession?
     @Published var otpRequestResponse: OTPRequestResponse?
     @Published var otpValidateResponse: OTPValidateResponse?
+    @Published var tenantList: [Tenant] = []
         
     func getAuthSession() async {
             
@@ -79,7 +80,9 @@ class LoginViewModel: ObservableObject {
             let (data, _) = try await URLSession.shared.data(for: request)
                 
             if let responseString = String(data: data, encoding: .utf8) {
-                otpRequestResponse = OTPRequestResponse(response: responseString)
+                DispatchQueue.main.async {
+                    self.otpRequestResponse = OTPRequestResponse(response: responseString)
+                }
             } else {
                 print("Could not convert data to string")
             }
@@ -88,7 +91,7 @@ class LoginViewModel: ObservableObject {
         }
     }
     
-    func validateOTP(username: String, password: String, authSession: AuthSession, otp: String, applicationId: String) async {
+    func validateOTP(username: String, password: String, authSession: AuthSession, otp: String, applicationId: String, completion: @escaping () async -> Void) async {
         
         let otpValidate = OTPValidate(
             username: username,
@@ -127,10 +130,14 @@ class LoginViewModel: ObservableObject {
             if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                 do {
                     let otpResponse = try JSONDecoder().decode(OTPValidateResponse.self, from: data)
+                    
+                    DispatchQueue.main.async {
+                        self.otpValidateResponse = otpResponse
                         
-                    self.otpValidateResponse = otpResponse
-
-                    // onComplete()
+                        Task {
+                            await completion()
+                        }
+                    }
                 } catch {
                     print("Error decoding OTPValidateResponse: \(error.localizedDescription)")
                 }
@@ -140,6 +147,51 @@ class LoginViewModel: ObservableObject {
                 } else {
                         print("POST (otp/validate): Body is null")
                 }
+            }
+        }.resume()
+    }
+    
+    func getTenantList(completion: @escaping () -> Void) async {
+        
+        guard let token = otpValidateResponse?.token else {
+            // handle case token unavailable
+            return
+        }
+            
+        let url = URL(string: "http://127.0.0.1:5001/api/v1/tenant/user/self")!
+            
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, let httpResponse = response as? HTTPURLResponse, error == nil else {
+                // handle error
+                print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                
+                return
+            }
+                
+            if (200..<300).contains(httpResponse.statusCode) {
+                do {
+                    let decodedData = try JSONDecoder().decode([Tenant].self, from: data)
+                    
+                    DispatchQueue.main.async {
+                        self.tenantList = decodedData
+                        
+                        print(self.tenantList.count)
+                        
+                        print(self.tenantList[0])
+                        
+                        completion()
+                    }
+                } catch {
+                    // handle decoding error
+                    print("Error decoding JSON: \(error)")
+                }
+            } else {
+                // handle unsuccessful response
+                print("UNSUCCESSFUL RESPONSE! GET (tenant/self): \(String(data: data, encoding: .utf8) ?? "")")
             }
         }.resume()
     }
