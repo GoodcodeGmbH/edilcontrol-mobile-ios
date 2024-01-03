@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct EdilControliOSApp: App {
+    
+    @StateObject var viewModel = AuthView.ViewModel()
+    
     var body: some Scene {
         WindowGroup {
             AuthView()
+                .environmentObject(viewModel)
         }
     }
 }

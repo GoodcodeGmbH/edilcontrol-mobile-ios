@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1159362B3ED14A008A83AA /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1159352B3ED14A008A83AA /* OTPView.swift */; };
 		2DA803222B347B180084317A /* OTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803212B347B180084317A /* OTPRequest.swift */; };
 		2DA803242B347BC90084317A /* OTPRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803232B347BC90084317A /* OTPRequestResponse.swift */; };
 		2DA8D7F12B342BCF005FFBB7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8D7F02B342BCF005FFBB7 /* LoginViewModel.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D1159352B3ED14A008A83AA /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		2DA803212B347B180084317A /* OTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequest.swift; sourceTree = "<group>"; };
 		2DA803232B347BC90084317A /* OTPRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequestResponse.swift; sourceTree = "<group>"; };
 		2DA8D7F02B342BCF005FFBB7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				2DAF383E2B303AAD00C0C760 /* AuthView.swift */,
+				2D1159352B3ED14A008A83AA /* OTPView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1159362B3ED14A008A83AA /* OTPView.swift in Sources */,
 				2DAF383F2B303AAD00C0C760 /* AuthView.swift in Sources */,
 				2DA8D7F12B342BCF005FFBB7 /* LoginViewModel.swift in Sources */,
 				2DA803242B347BC90084317A /* OTPRequestResponse.swift in Sources */,
