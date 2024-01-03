@@ -18,9 +18,9 @@ struct OTPView: View {
         NavigationView {
             VStack {
                 NavigationLink(destination: TenantListView().environmentObject(loginViewModel).navigationBarBackButtonHidden(true), isActive: $navigateToTenantListView) {
-                           EmptyView()
+                    EmptyView()
                 }
-                Image(systemName: "globe")
+                Image("EdilControlLogo")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
                 VStack(spacing: 12) {

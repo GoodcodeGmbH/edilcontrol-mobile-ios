@@ -1,17 +1,14 @@
 {
   "images" : [
     {
-      "filename" : "edilcontrol-logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "edilcontrol-logo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "edilcontrol-logo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

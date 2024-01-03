@@ -17,9 +17,9 @@ struct AuthView: View {
         NavigationView {
             VStack {
                 NavigationLink(destination: OTPView().environmentObject(loginViewModel).navigationBarBackButtonHidden(true), isActive: $navigateToOTPView) {
-                           EmptyView()
+                    EmptyView()
                 }
-                Image(systemName: "globe")
+                Image("EdilControlLogo")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
                 VStack(spacing: 12) {
