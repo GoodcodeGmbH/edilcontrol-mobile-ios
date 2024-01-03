@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemTenantList: View {
+    
     var tenant: Tenant
     
     var body: some View {

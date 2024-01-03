@@ -22,6 +22,7 @@
 		2D2DFDE42B4564F500A1C712 /* URLSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDE32B4564F500A1C712 /* URLSettings.swift */; };
 		2D2DFDE72B456BC900A1C712 /* TenantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDE62B456BC900A1C712 /* TenantListView.swift */; };
 		2D2DFDE92B456C5700A1C712 /* ItemTenantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDE82B456C5700A1C712 /* ItemTenantList.swift */; };
+		2D2DFDEE2B45A33600A1C712 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2DFDED2B45A33600A1C712 /* Constant.swift */; };
 		2DA803222B347B180084317A /* OTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803212B347B180084317A /* OTPRequest.swift */; };
 		2DA803242B347BC90084317A /* OTPRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA803232B347BC90084317A /* OTPRequestResponse.swift */; };
 		2DA8D7F12B342BCF005FFBB7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8D7F02B342BCF005FFBB7 /* LoginViewModel.swift */; };
@@ -68,6 +69,7 @@
 		2D2DFDE32B4564F500A1C712 /* URLSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSettings.swift; sourceTree = "<group>"; };
 		2D2DFDE62B456BC900A1C712 /* TenantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantListView.swift; sourceTree = "<group>"; };
 		2D2DFDE82B456C5700A1C712 /* ItemTenantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTenantList.swift; sourceTree = "<group>"; };
+		2D2DFDED2B45A33600A1C712 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2DA803212B347B180084317A /* OTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequest.swift; sourceTree = "<group>"; };
 		2DA803232B347BC90084317A /* OTPRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRequestResponse.swift; sourceTree = "<group>"; };
 		2DA8D7F02B342BCF005FFBB7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Tenant;
 			sourceTree = "<group>";
 		};
+		2D2DFDEC2B45A2F000A1C712 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2D2DFDED2B45A33600A1C712 /* Constant.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		2DA8D7EF2B342B9B005FFBB7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +224,7 @@
 		2DAF383B2B303AAD00C0C760 /* EdilControliOS */ = {
 			isa = PBXGroup;
 			children = (
+				2D2DFDEC2B45A2F000A1C712 /* Utility */,
 				2D1159332B3ECF56008A83AA /* View */,
 				2DA8D7F22B343839005FFBB7 /* Model */,
 				2DA8D7EF2B342B9B005FFBB7 /* ViewModel */,
@@ -399,6 +410,7 @@
 				2D2DFDE02B45649200A1C712 /* Company.swift in Sources */,
 				2DAF383D2B303AAD00C0C760 /* EdilControliOSApp.swift in Sources */,
 				2D2DFDD42B4562E000A1C712 /* User.swift in Sources */,
+				2D2DFDEE2B45A33600A1C712 /* Constant.swift in Sources */,
 				2D2DFDD82B4563CE00A1C712 /* Application.swift in Sources */,
 				2D2DFDD62B45638700A1C712 /* Authority.swift in Sources */,
 			);
