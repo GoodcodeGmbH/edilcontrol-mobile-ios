@@ -102,7 +102,7 @@ class LoginViewModel: ObservableObject {
             applicationId: applicationId
         )
         
-        guard let url = URL(string: "http://127.0.0.1:5001/api/v1/auth/otp/validate") else {
+        guard let url = URL(string: "\(Constant.authUrl)\(Constant.otpValidateEndpoint)") else {
             print("Invalid URL")
             
             return

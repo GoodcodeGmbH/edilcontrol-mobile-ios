@@ -9,13 +9,13 @@ struct Constant {
     static let edilControlLogo = "EdilControlLogo"
     
     // auth
-    static let authUrl = "http://127.0.0.1:5001/api/v1/auth/"
+    static let authUrl = "http://3.254.87.186:5001/api/v1/auth/"
     static let sessionEndpoint = "session"
     static let otpRequestEndpoint = "otp/request"
     static let otpValidateEndpoint = "otp/validate"
     
     // tenant
-    static let tenantUrl = "http://127.0.0.1:5001/api/v1/tenant/"
+    static let tenantUrl = "http://3.254.87.186:5001/api/v1/tenant/"
     static let selfEndpoint = "user/self"
     
     // utility for api call
